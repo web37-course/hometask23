@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/fontawesome/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="./assets/js/app.js"></script>
+</head>
+
+<body style="background-image: url(./assets/img/photo-1512314889357-e157c22f938d.jpg); background-repeat: no-repeat; background-size: cover;">
+
+    <div class="page container">
+
+      <div class="mt-5 description">
+        <h1 class="text-center mb-5 text-light">Сыграем в игру?</h1>
+        <p class="text-center text-light">Игра - простая: я загадаю число от 1 до 100, у тебя будет 10 попыток, чтобы его угадать. Начнем?</p>
+      </div>
+
+      <div class="mt-5 d-flex justify-content-center">
+        <button onclick="startGame()" class="btn btn-secondary w-50">Давай!</button>
+      </div>
+      
+
+      <dialog class="w-50 h-50 border-warning">
+        
+        <div class="text-end text-warning fs-1">
+          <i onclick="closeGame()" class="fas fa-window-close"></i>
+        </div>
+        
+        <div class="input">
+          <p id="counter" class="text-secondary fs-2 fw-bold">Осталось попыток: 10</p>
+          <div class="mb-3 row">
+            <label id="inputNumberLabel" for="inputNumber" class="col-sm-3 col-form-label text-secondary fs-4 fw-bold">Введи число</label>
+            <div class="mb-3 col-sm-4">
+              <input type="number" class="form-control border-warning fw-bold" id="inputNumber" min="1" max="100">
+            </div>
+            <div class="mb-3 col-sm-4">
+              <button id="inputNumberButton" onclick="inputUserNumber()" class="btn btn-warning fw-bold fs-4"> Дать ответ</button>
+            </div>
+            <p id="hint" class="mb-3 text-secondary fs-3 fw-bold"></p>
+          </div>
+        </div>
+
+        <div class="optional d-flex justify-content-center ">
+          <button onclick="retryGame()" id="retry" class="d-none btn btn-warning fs-4 fw-bold w-50">Еще раз?</button>
+        </div>
+      </dialog>
+
+
+    </div>
+
+    
+</body>
+
+</html>
