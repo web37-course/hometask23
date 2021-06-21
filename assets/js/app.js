@@ -39,7 +39,7 @@ function inputUserNumber(){
         counter.innerHTML = `Осталось попыток: ${triesCounter}`;
         triesCounter--; 
     }else{
-        counter.innerHTML = `Попытки закончились`;
+        counter.innerHTML = `Попытки закончились. Загаданное число было ${generatedNumber}`;
         hint.innerHTML = "Попробуй еще раз";
         inputNumber.classList.add('d-none');
         inputNumberLabel.classList.add('d-none');
