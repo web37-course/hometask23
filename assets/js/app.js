@@ -26,7 +26,7 @@ function inputUserNumber(){
     }else if(userNumber < generatedNumber){
         hint.innerHTML = `Твое число ${userNumber} меньше моего`;
     }else{
-        hint.innerHTML = "Правильно!";
+        hint.innerHTML = `Правильно! Загаданное число ${userNumber}`;
         counter.classList.add('d-none');
         inputNumber.classList.add('d-none');
         inputNumberLabel.classList.add('d-none');
@@ -60,7 +60,7 @@ function retryGame(){
     inputNumberLabel.classList.remove('d-none');
     inputNumberButton.classList.remove('d-none');
     retry.classList.add('d-none');
-    i = 9
+    triesCounter = 9
     generatedNumber = Math.floor(Math.random() * 100) + 1;
     console.log(generatedNumber);
     tag.close();
@@ -77,7 +77,7 @@ function closeGame(){
     inputNumberLabel.classList.remove('d-none');
     inputNumberButton.classList.remove('d-none');
     retry.classList.add('d-none');
-    i = 9
+    triesCounter = 9
     generatedNumber = Math.floor(Math.random() * 100) + 1;
     console.log(generatedNumber);
     tag.close();
