@@ -26,7 +26,7 @@ function inputUserNumber(){
     }else if(userNumber < generatedNumber){
         hint.innerHTML = `Твое число ${userNumber} меньше моего`;
     }else{
-        hint.innerHTML = `Правильно! Загаданное число ${userNumber}`;
+        hint.innerHTML = `Правильно! Загаданное число ${generatedNumber}`;
         counter.classList.add('d-none');
         inputNumber.classList.add('d-none');
         inputNumberLabel.classList.add('d-none');
